@@ -1,0 +1,22 @@
+[project]
+name = "qt-rules-mcp"
+version = "0.1.0"
+description = "MCP server for Qt AI rules — anti-patterns, correct patterns, RULE/BANNED markers"
+requires-python = ">=3.11"
+license = "EUPL-1.2"
+authors = [{ name = "lpmwfx" }]
+readme = "README.md"
+dependencies = [
+    "fastmcp>=2.0.0",
+    "gitpython>=3.1.0",
+]
+
+[project.scripts]
+qt-rules-mcp = "qt_rules_mcp.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["qt_rules_mcp*"]
